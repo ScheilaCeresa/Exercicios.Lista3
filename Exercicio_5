@@ -1,0 +1,28 @@
+ //Escreva um algoritmo que leia 4 números inteiros (opção, n1, n2, n3) e escreve-os da seguinte maneira:
+ //se opção = 1 escreva o número n1
+ //se opção = 2 escreva o número n2
+ //se opção = 3 escreva o número n3
+ //se opção for outro valor qualquer escreva opção inválida
+algoritmo "exer.5.lista.selecao"
+var
+   opcao, n1, n2, n3: inteiro
+inicio
+      escreva ("Informe numeros inteiros: ")
+      leia (n1,n2,n3)
+      escreva ("Escolha uma opcao: ")
+      leia (opcao)
+      escolha (opcao)
+      
+      caso 1
+           escreval (n1)
+           
+      caso 2
+           escreval (n2)
+           
+      caso 3
+           escreval (n3)
+           
+      outrocaso
+               escreva ("Opcao invalida ")
+      fimescolha
+fimalgoritmo

@@ -1,0 +1,98 @@
+//Uma lanchonete fast food apresenta a seguinte relação de produtos:
+Código Descrição Preço (r$)
+//1 Hamburger 14,50  2 Chessburger 15,50  3 Cachorro Quente 10,00  4 Sanduíche Natural 13,50
+//5 Refrigerante 5,00  6 Suco de Laranja 6,00
+//7 Milk shake 10,50  8 Sundae 13,00  9 Casquinha 10,00
+//Cada cliente sempre deve pedir um item de alimentação (01 a 04), uma bebida (05 ou 06) e uma sobremesa (07 a
+//09). Escreva um algoritmo que leia os 3 códigos do pedido do cliente e informe a descrição/preço de cada item e o
+//preço final a pagar. Caso ocorra algum problema (código inválido ou repetição de algum item), exibir apenas uma
+//mensagem de erro. 
+
+algoritmo "exer.14.lista.selecao"
+var
+   codA, codB, codS: inteiro
+   valor, valor_a,valor_b, valor_c : real
+   opcao: caractere
+inicio
+
+   escreval (" ==Codigo=========Descrição===========Preço=======")
+   escreval
+   escreval ("    (01)          Hamburguer          14,50   ")
+   escreval ("    (02)          Chessburguer        15,50   ")
+   escreval ("    (03)          Cachorro Quente     10,00   ")
+   escreval ("    (04)          Sanduíche Natural   13,50   ")
+   escreval
+
+   escreva ("Informe o codigo do alimento de (01 a 04): ")
+   leia (codA)
+
+   escolha (codA)
+   caso 1
+      valor_a <- 14.50
+      escreva ("R$", 14.50)
+   caso 2
+      valor_a <- 15.50
+      escreva ("R$", 15.50)
+   caso 3
+      valor_a <- 10.00
+      escreva ("R$",10.00)
+   caso 4
+      valor_a <- 13.50
+      escreva ("R$", 13.50)
+   outrocaso
+      escreva ("Opção invalida. ")
+
+   fimescolha
+
+   escreval
+   escreval (" ==Codigo=========Descrição===========Preço=======")
+   escreval
+   escreval ("    (05)          Refrigerante        5,00  ")
+   escreval ("    (06)          Suco de Laranja     6,00  ")
+   escreval
+
+   escreva ("Informe o codigo da bebida de (05 a 06): ")
+   leia (codB)
+
+   escolha (codB)
+   caso 5
+      valor_b <- 5.00
+      escreva ("R$", 5.00)
+   caso 6
+      valor_b <- 6.00
+      escreva ("R$", 6.00)
+
+   outrocaso
+      escreva ("Opção invalida. ")
+   fimescolha
+
+   escreval
+   escreval (" ==Codigo=========Descrição===========Preço=======")
+   escreval
+   escreval ("   (07)           Milk Shake          10,50     ")
+   escreval ("   (08)           Sundae              13,00     ")
+   escreval ("   (09)           Caquinha            10,00     ")
+
+   escreva ("Informe o codigo da sobremesa de (07 a 09): ")
+   leia (codS)
+
+   escolha (codS)
+   caso 7
+      valor_c <- 10.50
+      escreva ("R$", 10.50)
+   caso 8
+      valor_c <- 13.00
+      escreva ("R$", 13.00)
+   caso 9
+      valor_c <- 10.00
+      escreva ("R$",10.00)
+   outrocaso
+      escreval ("Opção invalida. ")
+   fimescolha
+
+   valor <- valor_a+valor_b+valor_c
+   escreval
+   escreva ("Valor final da compra: R$", valor)
+
+
+fimalgoritmo

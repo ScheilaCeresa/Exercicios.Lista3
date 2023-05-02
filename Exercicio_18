@@ -1,0 +1,46 @@
+//Faça um algoritmo que leia um número inteiro representando um determinado mês do ano e escreva o mês por
+//extenso. Para valores menores do que 1 ou maiores do que 12 informe que o valor não é válido. 
+
+algoritmo "exer.18.lista.selecao"
+var
+   n_mes: inteiro
+   mes: caractere
+inicio
+   escreva ("Informe um numero conforme os meses do ano 1 a 12: ")
+   leia(n_mes)
+
+   se (n_mes<1) ou (n_mes>12) entao
+      escreva ("Erro. Tente novamente. ")
+   senao
+
+      escolha(n_mes)
+      caso 1
+         mes <- "janeiro"
+      caso   2
+         mes <- "fevereio"
+      caso  3
+         mes <- "março"
+      caso   4
+         mes <- "abril"
+      caso   5
+         mes <- "maio"
+      caso  6
+         mes <- "junho"
+      caso  7
+         mes <- "julho"
+      caso  8
+         mes <- "agosto"
+      caso  9
+        mes <- "setembro"
+      caso  10
+        mes <- "outubro"
+      caso  11
+         mes <- "novembro"
+      caso  12
+         mes <- "dezembro"
+
+      fimescolha
+   fimse
+
+   escreva ("O mes e: ", mes)
+fimalgoritmo

@@ -1,0 +1,28 @@
+//Escreva um algoritmo que leia a hora de início de um jogo e a hora final do jogo (considerando apenas horas
+//inteiras) e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é de 24 horas
+//e que o jogo pode iniciar em um dia e terminar no dia seguinte.
+
+algoritmo "exer.11.lista.selecao"
+var
+   hora_in, hora_fi, hora, jogo: inteiro
+inicio
+   escreva ("Informe o horario de inicio do jogo: ")
+   leia (hora_in)
+   escreva ("Informe o horario final do jogo: ")
+   leia (hora_fi)
+
+
+   hora <- ((hora_fi - 12) + (hora_in - 12))
+
+      se (hora_in < hora_fi) entao
+         jogo<- hora - hora_inicio
+         escreva ("O jogo durou 1 dia, 24 horas. ")
+      senao
+         se ( hora_in> hora_fi ) entao
+            escreva ("Erro! Tempo de jogo excedido. ")
+         senao
+            escreva ("Tempo de jogo de ", hora, " horas. ")
+         fimse
+      fimse
+
+fimalgoritmo

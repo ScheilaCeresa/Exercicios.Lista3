@@ -1,0 +1,49 @@
+// O cardápio de uma lanchonete é dado pela tabela abaixo
+//Código Produtos Preço Unitário (r$)
+//100 Cachorro quente + refrigerante 13,00
+//101 Misto quente + refrigerante 12,50
+//102 Misto frio + refrigerante 12,00
+//103 Queijo quente + refrigerante 12,25
+//Durante essa semana, a lanchonete está em promoção: para qualquer lanche de um mesmo tipo adquirido, leve 5
+//e pague 4. Faça um algoritmo que leia o código do pedido e o número de itens de um mesmo tipo a ser adquirido
+//por um consumidor e escreva o valor a pagar. Caso o código do pedido não seja válido, escreva apenas uma
+//mensagem de erro. O consumidor só pode pedir itens de um mesmo tipo. 
+
+algoritmo "Exer.17.lista.SELECAO"
+var
+   opcao, quant: inteiro
+   valor, valor_final, valor_desconto: real
+inicio
+      escreval ("====================MENU========================")
+      escreval ("CODIGO ---------- PRODUTO --------------- PREÇO ")
+      escreval ("(100)  Cachorro-quente + refrigerenate   R$13,00")
+      escreval ("(101)  Misto quente + refrigerante       R$12,50")
+      escreval ("(102)  Misto frio + refrigerante         R$12,00")
+      escreval ("(103)  Queijo quente + refrigerante      R$12,25")
+      escreva ("Informe o codigo do produto que deseja: ")
+      leia (opcao)
+      escreva ("Informe a quantidade de produtos que deseja: ")
+      leia (quant)
+      
+      escolha(opcao)
+      
+      caso 100
+           valor <- 13.00
+      caso 101
+           valor <- 12.50
+      caso 102
+           valor <- 12.00
+      caso 103
+           valor <- 12.25
+      outrocaso
+               escreva ("Opção invalida. ")
+      fimescolha
+      
+      valor_desconto <- quant div 5
+      valor_final <- valor*(quant-valor_desconto)
+      
+      escreva (valor_final, valor_desconto)
+      
+      
+      
+fimalgoritmo

@@ -1,0 +1,62 @@
+//A 3NET decidiu dar a seus funcionários uma gratificação de Páscoa. Para cada empregado da empresa tem-se
+//nome, número de horas extras trabalhadas e número de faltas. Para calcular o prêmio, subtrai-se dois terços das
+//horas que o empregado não trabalhou de suas horas extras e atribui-se a gratificação segundo a tabela:
+//ht = horas extras - 2/3 * faltas Gratificação
+//ht > 40 horas 1000,00
+//30 < ht ≤ 40 800,00
+//20 < ht ≤ 30 600,00
+//10 < ht ≤ 20 400,00
+//ht ≤ 10 200,00
+//Faça um algoritmo que leia as informações de um funcionário e calcule a sua gratificação.
+
+algoritmo "exer.10.lista.selecao"
+var
+   nome: caractere
+   num_he, num_f, gratificacao, ht: real
+inicio
+   escreval ("================= 3 NET ====================")
+   escreva ("Informe o seu nome: ")
+   leia (nome)
+   escreval ("Informe a quantitade de horas extras trabalhadas: ")
+   leia (num_he)
+   escreval ("Informe a quantiade de faltas: ")
+   leia (num_f)
+
+   ht <- (num_he - (2/3)) * num_f
+
+   se (ht > 40 ) entao
+      gratificacao <- 1000
+      escreval ("Nome do funcionario: ", nome)
+      escreval ("Valor da gratificação: ", gratificacao)
+      escreval ("Total de horas: ", ht)
+   senao
+      se (ht > 30 ) e (ht <=40)entao
+         gratificacao <- 800
+         escreval ("Nome do funcionario: ", nome)
+         escreval ("Valor da gratificação: ", gratificacao)
+         escreval ("Total de horas: ", ht)
+      senao
+         se (ht > 20 ) e (ht <=30) entao
+            gratificacao <- 600
+            escreval ("Nome do funcionario: ", nome)
+            escreval ("Valor da gratificação: ",gratificacao)
+            escreval ("Total de horas: ", ht)
+         senao
+            se (ht > 10) e (ht <=20) entao
+               gratificacao <- 400
+               escreval ("Nome do funcionario: ", nome)
+               escreval ("Valor da gratificação: ",gratificacao)
+               escreval ("Total de horas: ", ht)
+            senao
+               gratificacao <- 200
+               escreval ("Nome do funcionario: ", nome)
+               escreval ("Valor da gratificação: ", gratificacao)
+               escreval ("Total de horas: ", ht)
+            fimse
+         fimse
+      fimse
+   fimse
+
+
+
+fimalgoritmo

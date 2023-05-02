@@ -1,0 +1,34 @@
+//Escreva um algoritmo que leia três valores a, b e c, e calcule e escreva a média ponderada com pesos de 5 para
+//o maior dos 3 valores e 2.5 para os outros 2 valores. 
+algoritmo "exer.3.lista.selecao"
+var
+   a, b, c, media, p1, p2, p3: real
+inicio
+   escreva ("Informe suas tres notas: ")
+   leia (a, b, c)
+
+
+   se (a > b) e (b >= c) entao
+
+      p1 <- 5
+      p2 <- 2.5
+      p3 <- 2.5
+      media <- ((a*p1+b*p2+c*p3) / (p1+p2+p3))
+   senao
+      se (a < b) e (a >= c) entao
+         p1 <- 2.5
+         p2 <- 5
+         p3 <- 2.5
+         media <- ((a*p1+b*p2+c*p3) / (p1+p2+p3))
+      senao
+         p1 <- 2.5
+         p2 <- 2.5
+         p3 <- 5
+         media <- ((a*p1+b*p2+c*p3) / (p1+p2+p3))
+
+      fimse
+   fimse
+
+   escreval ("A sua media é: ", media)
+   escreva (p1, p2, p3)
+fimalgoritmo

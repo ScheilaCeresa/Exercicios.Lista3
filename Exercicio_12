@@ -1,0 +1,58 @@
+//Escreva um algoritmo que leia a matrícula, as 3 notas obtidas por um aluno nas 3 verificações parciais e a média
+//dos exercícios (ME) que fazem parte da avaliação. Calcule a média de aproveitamento, usando a fórmula:
+//Média de aproveitamento = VP1A + VP1B * 2 + VP2 * 3 + ME/7
+//A atribuição dos conceitos obedece à tabela abaixo: Média de aproveitamento conceito
+//>= 9.0 A
+//>= 7.5 e < 9.0 B
+//>= 6.0 e < 7.5 C
+//>= 4.0 e < 6.0 D
+//< 4.0 E
+//O algoritmo deve escrever a matrícula do aluno, as notas das verificações, a média dos exercícios, a média de
+//aproveitamento, o conceito correspondente e a mensagem ‘aprovado’ caso o conceito seja A, B ou C, e ‘reprovado’
+//caso o conceito seja D ou E. 
+
+algoritmo "exer.12.lista.selecao"
+var
+   matricula, conceito, situ: caractere
+   media, me, n1, n2, n3: real
+inicio
+   escreva ("Informe sua matricula: ")
+   leia  (matricula)
+   escreva ("Informe suas tres notas: ")
+   leia (n1, n2, n3, me)
+
+   media <- (n1 + (n2*2) + (n3*3) + me) /7
+
+   se (media >= 9.0) entao
+      conceito <- "A"
+   senao
+      se (media >= 7.5)  entao
+         conceito <- "B"
+      senao
+         se (media >= 6.0)  entao
+            conceito <- "C"
+         senao
+            se (media >= 4.0)  entao
+               conceito <- "D"
+            senao
+               conceito <- "Ee"
+            fimse
+         fimse
+      fimse
+   fimse
+
+   se (conceito = "A") ou (conceito = "B") ou (conceito = "C" ) entao
+      situ <- "Aprovado."
+   senao
+      situ <- "Reprovado."
+   fimse
+
+   escreval ("Matricula do aluno(a): ", matricula)
+   escreval ("As notas: ", n1, n2, n3)
+   escreval ("A media dos exercicios: ", me)
+   escreval ("A media de aproveitamento: ", media)
+   escreval ("O conceito recebido: ", conceito)
+   escreva  ("Situação: ", situ)
+
+
+fimalgoritmo

@@ -1,0 +1,27 @@
+//Faça um algoritmo que leia o sexo e altura de uma pessoa e calcule seu peso ideal, considerando que para
+//homens o peso ideal é igual a (72,7 * altura) - 58 e para mulheres o peso ideal é igual a (62.1 * altura) - 44.7.
+
+algoritmo "Exer.16.lista.selecao"
+var
+   sexo: caractere
+   altura, peso_ideal: real
+inicio
+   repita
+      escreva("Informe seu sexo biologico M ou F: ")
+      leia (sexo)
+   ate (sexo = "M") ou (sexo = "F")
+       escreva ("Informe sua altura: ")
+       leia (altura)
+       
+       se (sexo = "M") entao
+          peso_ideal <- (72.7*altura)- 58
+          escreva ("Seu peso ideal é: ", peso_ideal:5:2)
+       senao
+            se
+              peso_ideal <- (62.1*altura)- 44.7
+              escreva ("Seu peso ideal é: ", peso_ideal:5:2)
+            senao
+                 escreva ("Sexo invalido. ")
+            fimse
+       fimse
+fimalgoritmo

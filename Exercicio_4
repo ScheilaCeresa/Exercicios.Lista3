@@ -1,0 +1,16 @@
+//Escreva um algoritmo que leia 2 valores inteiros, a e b, e escreve-os juntamente com a mensagem ‘são múltiplos’
+//ou ‘não são múltiplos’, conforme o caso. 
+algoritmo "exer.4.lista.selecao"
+var
+    a, b:inteiro
+inicio
+      escreva ("Informe dois numeros inteiros: ")
+      leia (a,b)
+      
+      se (a mod b= 0) ou (b mod a =0) entao
+      
+         escreva ("São multiplos ")
+      senao
+           escreva ("Não são multiplos ")
+      fimse
+fimalgoritmo

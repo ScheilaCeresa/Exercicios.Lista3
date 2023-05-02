@@ -1,0 +1,38 @@
+//*Faça um algoritmo para calcular as raízes reais de uma equação quadrática: ax2
+// + bx + c = 0. Uma equação
+//quadrática só tem raiz reais se (b2
+//- 4ac) for maior ou igual a zero. O algoritmo deve ser capaz de tratar os casos
+//em que há duas raízes distintas, uma raiz real ou nenhuma raiz. 
+
+
+algoritmo "exer.8.lista.selecao"
+var
+   a, b, c, x1, x, delta, equacao_m, equacao: real
+inicio
+   escreva ("Informe os valores de bhaskara: ")
+   leia (a, b, c)
+
+   delta <- (b^2) - (4*a*c)
+
+   se (delta >= 0) entao
+
+      equacao_m <- (b+(raizq(delta))) / (2*a)
+      equacao <- (b-(raizq(delta))) / (2*a)
+      escreval ("É uma equação quadratica. Valor de delta: ", delta)
+      escreval ("=====================================================")
+      escreval ("a",a, "x^2 + b",b,"x + c",c," = 0 ")
+      escreval("======================================================")
+      escreval ("(b",b," +- delta", delta, ") ","/2")
+      escreval ("=====================================================")
+      escreval ("(b",b," + raiz de delta", raizq(delta),") ","/2)")
+      escreval ("=====================================================")
+      escreval ("(b",b," - raiz de delta", raizq(delta), ") ", "/2")
+      escreval ("=====================================================")
+      escreval ("(b", b, " +", raizq(delta), ")", "/2 =", equacao_m)
+      escreval ("=====================================================")
+      escreval ("(b", b, " -", raizq(delta), ")", "/2 =", equacao)
+      escreval ("=====================================================")
+   senao
+      escreva ("Valor invalido para equação! Delta menor que 0. ")
+   fimse
+fimalgoritmo

@@ -1,0 +1,35 @@
+//Faça um algoritmo que leia 3 valores x, y, z, e verifique se podem ser os comprimentos dos lados de um triângulo.
+//Em caso afirmativo, verifique se é ‘triângulo equilátero’, ‘triângulo isósceles’ ou ‘triângulo escaleno’. Em caso
+//negativo, escreva uma mensagem: ‘os valores lidos não formam um triângulo’. Considere que:
+//• o comprimento de cada lado de um triângulo é menor que a soma dos comprimentos dos outros lados
+//• um triângulo equilátero tem três lados iguais
+//• um triângulo isósceles tem dois lados iguais e um diferente
+//• um triângulo escaleno tem três lados diferentes. 
+
+algoritmo "exer.7.lista.selecao"
+var
+   x, y, z: real
+   triangulo: logico
+
+inicio
+
+   escreva("Digite 3 valores: ")
+   leia(x,y,z)
+
+   triangulo <- (x < y+z) e (y < x+z) e (z < x+y)
+
+   se (triangulo) entao
+      se (x=y) e (y=z) entao
+         escreva("É um triângulo equilátero: ", x, y, z)
+      senao
+         se (x<>y) e (x<>z) e (y<>z)entao
+            escreva("É um triângulo escaleno: ", x, y, z)
+         senao
+            escreva("É um triângulo isósceles: ", x, y, z)
+         fimse
+      fimse
+   senao
+      escreva("Os valores lidos não formam um triângulo. ", triangulo)
+   fimse
+
+fimalgoritmo

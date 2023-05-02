@@ -1,0 +1,48 @@
+//Uma empresa está aumentando o salário de seus empregados de acordo com a categoria ocupada seguindo a
+//tabela abaixo
+//categoria % de aumento sobre salário atual
+//A, C, F, H 10
+//B, D, E, G 15
+//I, K até R 20
+//J, S até Z 25
+//Faça um algoritmo que leia o nome, a categoria e o salário atual de um funcionário e escreva o nome e o salário reajustado. 
+
+algoritmo "exer.19.lista.selecao"
+var
+   nome, categoria: caractere
+   salario_atual, salario_ajuste, aumento: real
+inicio
+      escreva ("Informe seu nome: ")
+      leia (nome)
+      escreva ("Informe a categoria ocupada de A a Z: ")
+      leia (categoria)
+      escreva ("Informe seu salario atual: ")
+      leia (salario_atual)
+      
+      escolha (MAIUSC(categoria))
+              caso "A", "C", "F", "H"
+                   aumento <- 10
+              caso "B", "D", "E", "G"
+                   aumento <- 15
+              caso "I", "K", "L", "M", "N", "O", "P", "Q", "R"
+                   aumento <- 20
+              caso "J", "S", "T", "U", "V", "W", "X", "Y", "Z"
+                   aumento <- 25
+              outrocaso
+                       escreva ("Dado invalido. ")
+              fimescolha
+              
+              
+         
+          //salario_ajuste <- (salario_atual*aumento) + salario_atual
+          //salario_ajuste <- salario_atual * (1+ aumento/100)
+         
+         
+       salario_ajuste <- salario_atual+((aumento*salario_atual)/100)
+       escreval ("Nome do funcionario: ", nome)
+       escreval ("Porcentagem de aumento: ", aumento, "%")
+       escreva ("Salario reajustado: ", "R$",salario_ajuste)
+
+
+
+fimalgoritmo

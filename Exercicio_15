@@ -1,0 +1,41 @@
+//Faça um algoritmo leia um caracter indicando uma opção:
+// se opção = ‘T’ ⇒ calcular a área de um triângulo de base b e altura h
+// se opção = ‘Q’ ⇒ calcular a área de um quadrado de lado l
+// se opção = ‘R’ ⇒ calcular a área de um retângulo de base b e altura h 
+
+algoritmo "EXER.15.LISTA.SELECAO"
+var
+   opcao: caracter
+   area, base, altura, lado: real
+inicio
+       escreval ("(T) calcular a área de um triângulo de base b e altura h ")
+       escreval ("(Q) calcular a área de um quadrado de lado l ")
+       escreval ("(R) calcular a área de um retângulo de base b e altura h ")
+       
+       escreva ("Informe o que deseja cacular: ")
+       leia (opcao)
+       
+       escolha MAIUSC(opcao)
+       
+               caso "T"
+                    escreva ("Informe a altura e base de um triangulo: ")
+                    leia (altura, base)
+                    area <- altura*base
+                    escreva (area)
+               caso "Q"
+                    escreva ("Informe o lado do quadrado: ")
+                    leia (lado)
+                    area <- lado^2
+                    
+               caso "R"
+                    escreva ("Informe a altura e base de um retangulo: )
+                    leia (altura, base)
+                    area <- altura*base
+                    escreva (area)
+               outrocaso
+                        escreva ("Opção invalida. ")
+               fimescolha
+                    
+                    
+                    
+fimalgoritmo

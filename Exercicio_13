@@ -1,0 +1,29 @@
+// O departamento do meio ambiente mantém 3 listas (lista A, lista B e lista C) de indústrias conhecidas por serem
+//altamente poluentes da atmosfera. Os resultados de várias medidas são combinados para formar o que é chamado
+//de “índice de poluição”. Isso é controlado regularmente. Normalmente os valores variam entre 0.05 e 0.25. Se o
+//valor atingir 0.30, as indústrias da lista A serão chamadas a suspender as operações até que os valores retornem
+//ao intervalo normal. Se o índice atingir 0.40, as indústrias da lista B serão notificadas também. Se o índice exceder
+//0.50, indústrias de todas as 3 listas serão avisadas para suspenderem as atividades. Faça um algoritmo para ler o
+//índice de poluição e indicar as notificações apropriadas.
+
+algoritmo "exer.13.lista.selecao"
+var
+   ip: real
+inicio
+   escreva ("Informe o indice de poluição: ")
+   leia (ip)
+
+   se (ip > 0.5 ) e (ip < 0.25) entao
+      escreva ("Indice de poluição normal. ")
+   senao
+      se (ip > 0.30 ) e (ip < 0.39) entao
+         escreva ("Empresas da lista A, estao com atividade suspensa ate indice de poluição normalizar.")
+      senao
+         se (ip > 0.40) e (ip < 0.49) entao
+            escreva ("Empresas da Lista A e Lista B, estao com atividade suspensa ate indice de poluição normalizar.")
+         senao
+            escreva ("Empresas da lista A, Lista B e Lista C estao com atividade suspensa ate indice de poluição normalizar.")
+         fimse
+      fimse
+   fimse
+fimalgoritmo
